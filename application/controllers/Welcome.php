@@ -29,7 +29,7 @@ class Welcome extends Application {
 
         //set up the rating widget
         $this->caboose->needed('jrating','hollywood');
-        
+        $this->average();
 	$this->render();
     }
 

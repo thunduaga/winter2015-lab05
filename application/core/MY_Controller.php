@@ -43,6 +43,12 @@ class Application extends CI_Controller {
         $this->data['data'] = &$this->data;
         $this->parser->parse('_template', $this->data);
     }
+    function average()
+    {
+        $this->data['average'] =
+        ($this->data['vote_count'] > 0) ?
+        ($this->data['vote_total'] / $this->data['vote_count']) : 0;
+    }
 
 }
 

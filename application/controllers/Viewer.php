@@ -24,7 +24,7 @@ class Viewer extends Application {
 	$this->data['authors'] = $this->quotes->all();
         //set up the rating widget
         $this->caboose->needed('jrating','hollywood');
-        
+        $this->average();
 	$this->render();
     }
 

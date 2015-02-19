@@ -19,6 +19,7 @@ class Admin extends Application {
         $this->data['title'] = 'Quotations Maintenance';
         $this->data['quotes'] = $this->quotes->all();
         $this->data['pagebody'] = 'admin_list';
+        $this->average();
         $this->render();
     } 
     // Add a new quotation
@@ -38,6 +39,7 @@ class Admin extends Application {
       $this->data['pagebody'] = 'quote_edit';
       $this->render();
     } 
+    
 
 }
 
