@@ -24,7 +24,7 @@ class Viewer extends Application {
 	$this->data['authors'] = $this->quotes->all();
         //set up the rating widget
         $this->caboose->needed('jrating','hollywood');
-        $this->average();
+        //$this->average();
 	$this->render();
     }
 
@@ -33,6 +33,8 @@ class Viewer extends Application {
     {
 	$this->data['pagebody'] = 'justone';    // this is the view we want shown
 	$this->data = array_merge($this->data, (array) $this->quotes->get($id));
+        $this->caboose->needed('jrating','hollywood');
+        $this->average();
 	$this->render();
     }
     // handle a rating
